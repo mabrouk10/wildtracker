@@ -20,14 +20,14 @@ class SightsController < ApplicationController
     #     render json: sight
     # end
 
-    # def create
-    #     sight = Sight.create(sight_params)
-    #     if sight.valid?
-    #         render json: sight
-    #     else
-    #         render json: sight.errors
-    #     end
-    # end
+    def create
+        sight = Sight.create(sight_params)
+        if sight.valid?
+            render json: sight
+        else
+            render json: sight.errors
+        end
+    end
 
     def destroy
         sight = Sight.find(params[:id])

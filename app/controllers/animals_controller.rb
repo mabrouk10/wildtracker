@@ -74,7 +74,7 @@ end
 
     private
     def animal_params
-        params.require(:animal).permit(:name, :latin, :kingdom)
+        params.require(:animal).permit(:name, :latin, :kingdom, sights_attributes: [ :id, :date, :latitude, :longitude ] )
     end
     
 
